@@ -1,52 +1,58 @@
 <html>
   <head>
+    <meta charset="utf-8"/>
     <link rel="stylesheet" href="sounding.css">
     <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
     <script src="https://api4.windy.com/assets/libBoot.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
-  
-  <body>
-    <div id="windy"></div>
-	<div id="TeGramOuterDiv">
-		 <div id="TeGramSpacerDiv">
+  <body>  
+   <div id="windy"></div>
+	<div id="soundingOuterDiv">
+		 <div id="soundingSpacerDiv">
 		 </div>
-	    <div id="TeGramLatLonInputDiv">
-	        <button id="TeGramPlotButton" type="button">Plot</button>
-	        <span id="TeGramlatLonText">Lat, Lon: </span><input id="TeGramLatLonInput" value="13, 80"/>
-	        <button id="TeGramHideButton" type="button">Hide</button>
-	        <button id="TeGramShowButton" type="button">Show</button>
+	    <div id="soundingLatLonInputDiv">
+	        <button id="soundingPlotButton" type="button">Plot</button>
+	        <span id="soundinglatLonText">Lat, Lon: </span>
+	        <input id="soundingLatLonInput" value="13, 80"/>
+	        <button id="soundingHideButton" type="button">Hide</button>
+	        <button id="soundingShowButton" type="button">Show</button>
 	    </div>
-	    <div id="TeGramOutputDiv">
+	    <div id="soundingOutputDiv">
 	
 			<!-- Tab content -->
-			<div id="TeGramTabContentWrapper">
+			<div id="soundingTabContentWrapper">
 		
-		    	<div id="TeGramTabWrapper">
+		    	<div id="soundingTabWrapper">
 					<div class="tab">
-						<button id="TeGramTextTabButton" class="tablinks active">Text</button>
-						<button id="TeGramGraphTabButton" class="tablinks" >Graph</button>
+						<button id="soundingTextTabButton" class="tablinks active">Text</button>
+						<button id="soundingGraphTabButton" class="tablinks" >Graph</button>
 					</div>
 				</div>
 	
-				<div id="TeGramTextTab" class="tabcontent">
-					 <div id="TeGramDataTextOuterDiv">
-					     <pre id="TeGramDataTextArea">     
+				<div id="soundingTextTab" class="tabcontent">
+					 <div id="soundingDataTextOuterDiv">
+					     <pre id="soundingDataTextArea">     
 					     </pre>
 					</div>
 				</div>	    
-			    
-			   <div id="TeGramGraphTab" class="tabcontent">
-					  <div id="TeGramGraphOuterDiv">
-			   	             <div id='TeGramGraphDiv'>
-			        		</div>
-			        		<div id='hodoGraphDiv'>
-			        		</div>
-			   		</div>
+			   
+			   <div id="soundingGraphTab" class="tabcontent">
+				  <div id="soundingGraphPreamble">
+				  </div>
+				  <div id="soundingGraphOuterDiv">
+		        		<div id="TeGramGraphDiv">
+		        		</div>
+		        		<div id='soundingGraphDiv'>
+		        		</div>
+		        		<div id='hodoGraphDiv'>
+		        		</div>
+		   		</div>
 				</div>	
 			</div>     
 	    </div>
-	</div>
+	</div> -->
 </body>
-   <script src="sounding.js"></script>
+<script src="sounding.js"></script>
 </html>

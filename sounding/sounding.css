@@ -1,4 +1,15 @@
-#TeGramOuterDiv {
+body {
+  margin: 0 !important;
+}
+#windy {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#soundingOuterDiv {
+	 z-index: 999;
     background-color: black;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 0.3em;
@@ -15,18 +26,18 @@
     overflow: none;*/
 }
 
-#TeGramOuterDiv{
+#soundingOuterDiv{
     display: flex;
     flex-direction: column;
 }
 
-#TeGramSpacerDiv {
+#soundingSpacerDiv {
 	background: transparent;
 	height: 60px;
 	display: none;
 }
 
-#TeGramOutputDiv {
+#soundingOutputDiv {
     display: none;
     flex-direction: column;
 	flex: 1;
@@ -42,7 +53,7 @@
     padding: 0px;
 }
 
-#TeGramTabContentWrapper {
+#soundingTabContentWrapper {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
@@ -51,12 +62,12 @@
 	overflow-y: auto;*/
 }
 
-#TeGramHideOuterDiv{
+#soundingHideOuterDiv{
 	flex: 0;
 }
 
 
-#TeGramLatLonInputDiv{
+#soundingLatLonInputDiv{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -69,16 +80,16 @@
    padding: 0.3em;
 }
 
-#TeGramlatLonText{
+#soundinglatLonText{
     display: block;
     user-select:none;  
 }
 
-#TeGramLatLonInput{
+#soundingLatLonInput{
 	width: 10em;
 }
 
-#TeGramDataTextArea {
+#soundingDataTextArea {
     background-color: transparent;
     color: white;
     color: rgba(255, 255, 255, 0.8);
@@ -89,7 +100,7 @@
     user-select:auto;
 }
 
-#TeGramLatLonInputDiv button{
+#soundingLatLonInputDiv button{
 	background-color: #d49500;
 	color: white;
 	border: 0;
@@ -98,26 +109,26 @@
 	user-select:none;
 }
 
-#TeGramHideButton{
+#soundingHideButton{
     display: none;    
 }
 
-#TeGramShowButton {
+#soundingShowButton {
     display:auto;    
 }
 
-#TeGramDataTextArea, #TeGramGraphDiv {
+#soundingDataTextArea, #soundingGraphDiv {
     resize: none;
     width: 100%;
     padding: 0;
     margin: 0;
 }
 
-#TeGramDataTextArea {
+#soundingDataTextArea {
 	/*height: 95%;*/
 }
 
-#TeGramTabWrapper{
+#soundingTabWrapper{
 	width: 100%;
 	display: block;
 	flex: 0;
@@ -168,28 +179,39 @@
     padding: 0;
 }
 
-#TeGramTextTab, #TeGramGraphTab {
+#soundingTextTab, #soundingGraphTab {
 	width: 100%;
 	height: 100%;
 }
 
-#TeGramTextTab {
+#soundingTextTab {
 	display: block;
 }
 
-#TeGramDataTextOuterDiv, #TeGramGraphOuterDiv{
+#soundingDataTextOuterDiv, #soundingGraphOuterDiv{
+	box-sizing: border-box;
     width: 100%;
     height: 100%;
 }
 
-#TeGramGraphDiv, #hodoGraphDiv {
+#soundingGraphPreamble{
+	 background-color: white;
+    font-size: 12pt;
+    color: black;
+    text-align: center;
+    display: block;
+    padding-top: 0.3em;
+}
+
+#soundingGraphDiv, #TeGramGraphDiv, #hodoGraphDiv {
 	box-sizing: border-box;
-	min-height: 300px;
-	height: 50%;
-	border: 1px solid grey;
-	border-top: 0;
+	background-color: white;
+	min-height: 400px;
+	height: 33.33%;
+	border-top: 1px solid grey;
 	margin: auto;
 	user-select:none;
+	overflow: hidden;
 }
 
 
@@ -211,4 +233,70 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #f5f5f5; 
+}
+
+
+/*----------------------------*/
+#svg {
+	background-color: white;
+	display: block;
+	margin: auto;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+.x.axis path {  }
+.y.axis path {  }
+.axis { fill: #000; }
+.y.axis { font-size: 13px; }
+.y.axis.hght { font-size: 9px; fill: red;}
+.x.axis { font-size: 13px; }
+.y.axis.ticks text { display: none; }
+
+.temp {
+  fill: none;
+  stroke: red;
+  stroke-width: 3px;
+}
+.dwpt {
+  fill: none;
+  stroke: green;
+  stroke-width: 3px;
+}
+.thetaE {
+  fill: none;
+  stroke: orange;
+  stroke-width: 3px;
+}
+
+.skline   { stroke-width: 1.8px; /*opacity: 0.8;*/}
+.mean     { stroke-width: 2.5px; }
+
+.gridline, .tempzero {
+   stroke: #dfdfdf;
+   stroke-width: 0.75px;
+   fill: none;
+}
+.tempzero { stroke: #aaa; stroke-width: 1.25px; }
+
+.windbarb { stroke: #000; stroke-width: 0.75px; fill: none;}
+.flag { fill: #000; }
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus.tmpc circle { fill: red;   stroke: none; }
+.focus.dwpc circle { fill: green; stroke: none; }
+.focus text { font-size: 12px; }
+
+
+#skewtTitle{
+	font-size: 12pt;
+	text-anchor: middle;
 }
