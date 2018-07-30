@@ -1,0 +1,214 @@
+#TeGramOuterDiv {
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.3em;
+    border-radius: 0.3em;
+    position: absolute;
+    left: 0%;
+    bottom: 30%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-width: 100%;
+    max-height: 100%;
+    transition-duration: 300ms;
+    /*resize: both;
+    overflow: none;*/
+}
+
+#TeGramOuterDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+#TeGramSpacerDiv {
+	background: transparent;
+	height: 60px;
+	display: none;
+}
+
+#TeGramOutputDiv {
+    display: none;
+    flex-direction: column;
+	flex: 1;
+	width: 100%;
+	max-width: 550px;
+	margin-left: auto;
+    margin-right: auto;
+    /*background-color: white;
+    background-color: rgba(255, 255, 255, 0.3);*/
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+    border: 0px;
+    padding: 0px;
+}
+
+#TeGramTabContentWrapper {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 0px;
+/*	overflow-x: hidden;
+	overflow-y: auto;*/
+}
+
+#TeGramHideOuterDiv{
+	flex: 0;
+}
+
+
+#TeGramLatLonInputDiv{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+   background-color: white;
+   background-color: rgba(0, 0, 0, 0.3);
+   border: 0px;
+   color: white;
+   padding: 0.3em;
+}
+
+#TeGramlatLonText{
+    display: block;
+    user-select:none;  
+}
+
+#TeGramLatLonInput{
+	width: 10em;
+}
+
+#TeGramDataTextArea {
+    background-color: transparent;
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+    border: 0;
+    font-family: "monospace";
+    font-size:  12pt;
+    white-space: pre-wrap; 
+    user-select:auto;
+}
+
+#TeGramLatLonInputDiv button{
+	background-color: #d49500;
+	color: white;
+	border: 0;
+	margin: 0 0.5em;
+	padding: 0.2em 0.5em;
+	user-select:none;
+}
+
+#TeGramHideButton{
+    display: none;    
+}
+
+#TeGramShowButton {
+    display:auto;    
+}
+
+#TeGramDataTextArea, #TeGramGraphDiv {
+    resize: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#TeGramDataTextArea {
+	/*height: 95%;*/
+}
+
+#TeGramTabWrapper{
+	width: 100%;
+	display: block;
+	flex: 0;
+}
+
+/* Style the tab */
+.tab {
+    display: flex;
+    width: 100%;
+    /*border: 1px solid #ccc;*/
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tablinks{
+    flex: 0.5;
+    user-select:none;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: #d49500;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	    background-color: #ccc;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	 background-color: transparent;
+}
+
+/* Style the tab content */
+.tabcontent {
+	 flex: 1;
+    display: none;
+    /*border: 1px solid #ccc;*/
+    border-top: none;
+    padding: 0;
+}
+
+#TeGramTextTab, #TeGramGraphTab {
+	width: 100%;
+	height: 100%;
+}
+
+#TeGramTextTab {
+	display: block;
+}
+
+#TeGramDataTextOuterDiv, #TeGramGraphOuterDiv{
+    width: 100%;
+    height: 100%;
+}
+
+#TeGramGraphDiv, #hodoGraphDiv {
+	box-sizing: border-box;
+	min-height: 300px;
+	height: 50%;
+	border: 1px solid grey;
+	border-top: 0;
+	margin: auto;
+	user-select:none;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f1f1f1; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #f5f5f5; 
+}

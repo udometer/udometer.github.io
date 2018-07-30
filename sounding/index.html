@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="sounding.css">
+    <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+    <script src="https://api4.windy.com/assets/libBoot.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  
+  <body>
+    <div id="windy"></div>
+	<div id="TeGramOuterDiv">
+		 <div id="TeGramSpacerDiv">
+		 </div>
+	    <div id="TeGramLatLonInputDiv">
+	        <button id="TeGramPlotButton" type="button">Plot</button>
+	        <span id="TeGramlatLonText">Lat, Lon: </span><input id="TeGramLatLonInput" value="13, 80"/>
+	        <button id="TeGramHideButton" type="button">Hide</button>
+	        <button id="TeGramShowButton" type="button">Show</button>
+	    </div>
+	    <div id="TeGramOutputDiv">
+	
+			<!-- Tab content -->
+			<div id="TeGramTabContentWrapper">
+		
+		    	<div id="TeGramTabWrapper">
+					<div class="tab">
+						<button id="TeGramTextTabButton" class="tablinks active">Text</button>
+						<button id="TeGramGraphTabButton" class="tablinks" >Graph</button>
+					</div>
+				</div>
+	
+				<div id="TeGramTextTab" class="tabcontent">
+					 <div id="TeGramDataTextOuterDiv">
+					     <pre id="TeGramDataTextArea">     
+					     </pre>
+					</div>
+				</div>	    
+			    
+			   <div id="TeGramGraphTab" class="tabcontent">
+					  <div id="TeGramGraphOuterDiv">
+			   	             <div id='TeGramGraphDiv'>
+			        		</div>
+			        		<div id='hodoGraphDiv'>
+			        		</div>
+			   		</div>
+				</div>	
+			</div>     
+	    </div>
+	</div>
+</body>
+   <script src="sounding.js"></script>
+</html>
