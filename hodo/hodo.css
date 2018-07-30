@@ -3,6 +3,12 @@
         height: 100%;
 }
 
+
+#windy #logo-wrapper {
+    z-index: 1000;
+}
+
+
 #hodoOuterDiv {
     background-color: black;
     background-color: rgba(0, 0, 0, 0.6);
